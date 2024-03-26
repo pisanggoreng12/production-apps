@@ -30,3 +30,6 @@ Route::get('/deletedataprep/{productionid}',[PreparationController::class,'delet
 
 //Export pdf
 Route::get('/exportpdfprep',[PreparationController::class,'exportpdfprep'])->name('exportpdfprep');
+
+//Export excel
+Route::get('/exportexcelprep',[PreparationController::class,'exportexcelprep'])->name('exportexcelprep');

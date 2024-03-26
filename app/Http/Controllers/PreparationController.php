@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\PreparationExport;
 use App\Models\Preparation;
-use Barryvdh\DomPDF\PDF;
+use Barryvdh\DomPDF\Facade as PDF;
+use Barryvdh\DomPDF\Facade\Pdf as FacadePdf;
+use Barryvdh\DomPDF\PDF as DomPDFPDF;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 use PhpParser\Node\Stmt\Return_;
 
 class PreparationController extends Controller
@@ -51,10 +55,15 @@ class PreparationController extends Controller
 
     public function exportpdfprep(){
         $data = Preparation::all();
+        //$data = Preparation::where()->limit(1)->get()
 
         view()->share('data',$data);
-        $pdf = PDF::loadview('dataprep-pdf');
+        $pdf = FacadePdf ::loadview('dataprep-pdf');
         Return $pdf->download(('preparation.pdf'));
+    }
+
+    public function exportexcelprep(){
+            return Excel::download(new PreparationExport, 'datapreparation.xlsx');
     }
     
 }
