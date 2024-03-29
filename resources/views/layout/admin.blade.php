@@ -121,7 +121,16 @@
 
               <li class="nav-header">PRODUCTION</li>
 
-
+          
+              <li class="nav-item">
+                <a href="/masterdps" class="nav-link">
+                  <i class="nav-icon fas fa-th"></i>
+                  <p>
+                    Mater DPS
+                  </p>
+                </a>
+                
+              </li>
 
           <li class="nav-item">
             <a href="/preparation" class="nav-link">
@@ -130,6 +139,7 @@
                 Preparation
               </p>
             </a>
+            
           </li>
 
           <li class="nav-header">QUALITY</li>

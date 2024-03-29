@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PreparationController;
+use App\Http\Controllers\MasterdpsController;
+use App\Models\Masterdps;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +35,10 @@ Route::get('/exportpdfprep',[PreparationController::class,'exportpdfprep'])->nam
 
 //Export excel
 Route::get('/exportexcelprep',[PreparationController::class,'exportexcelprep'])->name('exportexcelprep');
+
+//Master DPS /
+Route::get('/masterdps',[MasterdpsController::class,'index'])->name('masterdps');
+
+//Master DPS /EDIT
+Route::get('/tampilkandps/{tag_rfid}',[MasterdpsController::class,'tampilkandps'])->name('tampilkandps');
+Route::post('/updatedps/{tag_rfid}',[MasterdpsController::class,'updatedps'])->name('updatedps');
