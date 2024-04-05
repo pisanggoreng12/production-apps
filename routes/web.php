@@ -3,7 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PreparationController;
 use App\Http\Controllers\MasterdpsController;
+use App\Http\Controllers\MasterfishsizeController;
 use App\Models\Masterdps;
+use App\Models\Masterfishsize;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,9 +38,15 @@ Route::get('/exportpdfprep',[PreparationController::class,'exportpdfprep'])->nam
 //Export excel
 Route::get('/exportexcelprep',[PreparationController::class,'exportexcelprep'])->name('exportexcelprep');
 
-//Master DPS /
+//MASTER DATA/masterdps
 Route::get('/masterdps',[MasterdpsController::class,'index'])->name('masterdps');
-
-//Master DPS /EDIT
+//MASTER DATA/masterdps-edit
 Route::get('/tampilkandps/{tag_rfid}',[MasterdpsController::class,'tampilkandps'])->name('tampilkandps');
 Route::post('/updatedps/{tag_rfid}',[MasterdpsController::class,'updatedps'])->name('updatedps');
+
+
+//MASTER DATA/masterfishsize
+Route::get('/masterfishsize',[MasterfishsizeController::class,'index'])->name('masterfishsize');
+//MASTER DATA/masterfishsize-tambah (tidak jadi di pakai karna ada masalah di database perihal primary key dan auto increment)
+Route::get('/tambahdatamasterfishsize',[MasterfishsizeController::class,'tambahdatamasterfishsize'])->name('tambahdatafishsize');
+Route::post('/insertdatamasterfishsize',[MasterfishsizeController::class,'insertdatamasterfishsize'])->name('insertdatamasterfishsize');

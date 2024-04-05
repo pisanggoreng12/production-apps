@@ -64,11 +64,11 @@
           <i class="fas fa-expand-arrows-alt"></i>
         </a>
       </li>
-      <li class="nav-item">
+      {{-- <li class="nav-item">
         <a class="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="true" href="#" role="button">
           <i class="fas fa-th-large"></i>
         </a>
-      </li>
+      </li> --}}
     </ul>
   </nav>
   <!-- /.navbar -->
@@ -84,17 +84,17 @@
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+      {{-- <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
           <img src="{{ asset('template/dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="#" class="d-block">Alexander Pierce</a>
         </div>
-      </div>
+      </div> --}}
 
       <!-- SidebarSearch Form -->
-      <div class="form-inline">
+      {{-- <div class="form-inline">
         <div class="input-group" data-widget="sidebar-search">
           <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
           <div class="input-group-append">
@@ -103,7 +103,7 @@
             </button>
           </div>
         </div>
-      </div>
+      </div> --}}
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
@@ -119,24 +119,75 @@
                 </a>    
               </li>
 
-              <li class="nav-header">PRODUCTION</li>
+              <li class="nav-header">PLANING</li>
 
-          
+
               <li class="nav-item">
-                <a href="/masterdps" class="nav-link">
-                  <i class="nav-icon fas fa-th"></i>
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-edit"></i>
                   <p>
-                    Mater DPS
+                    MASTER DATA
+                    <i class="fas fa-angle-left right"></i>
                   </p>
                 </a>
-                
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="/masterdps" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Mater DPS</p>
+                    </a>
+                  </li>
+                  {{-- <li class="nav-item">
+                    <a href="/masterfishsize" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Master Fish Size</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Master Species</p>
+                    </a>
+                  </li> --}}
+    
+                </ul>
               </li>
+
+              <li class="nav-header">PRODUCTION PROSES</li>
+
+
+
+
+
+
+          
+           
 
           <li class="nav-item">
             <a href="/preparation" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Preparation
+                INI NANTI HASIL TIMBANGAN RFID BEFORE COOKING
+              </p>
+            </a>
+            
+          </li>
+
+          <li class="nav-item">
+            <a href="/" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                INI NANTI HASIL TIMBANGAN RFID AFTER MISTING
+              </p>
+            </a>
+            
+          </li>
+
+          <li class="nav-item">
+            <a href="/" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                INI NANTI HASIL TIMBANGAN RFID UNTUK DI BAGIKAN KE LINE CLEANING
               </p>
             </a>
             

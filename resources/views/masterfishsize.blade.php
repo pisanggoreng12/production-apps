@@ -15,7 +15,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                         <div class="container-fluid">
                             <div class="row mb-2">
                             <div class="col-sm-6">
-                                <h1 class="m-0">MASTER DPS</h1>
+                                <h1 class="m-0">MASTER FISH SIZE</h1>
                             </div><!-- /.col -->
                             <div class="col-sm-6">
                                 <ol class="breadcrumb float-sm-right">
@@ -28,6 +28,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                     </div>
 
                 <div class="container">
+                    {{-- <a href="/tambahdatamasterfishsize" class="btn btn-success">Tambah</a> --}}
     
    
     <div class="row g-3 align-items-center mt-2">
@@ -55,34 +56,21 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">ID CARD</th>
-                    <th scope="col">DPS</th>
-                    <th scope="col">Spesies Code</th>
-                    <th scope="col">Spesies Desc</th>
                     <th scope="col">Size Code</th>
-                    <th scope="col">Size Desc</th>
-                    <th scope="col">Fish Lot</th>
-                    <th scope="col">Berat DPS</th>
-                    <th scope="col">Planing Date</th>
+                    <th scope="col">Size Description</th>
                     <th scope="col">Aksi</th>
 
                 </tr>
             </thead>
             <tbody>
-            @foreach ($datarfid as $row)
+            @foreach ($datafishsize as $row)
             <tr>
                 {{-- <th scope="row">{{ $row ->}}</th> --}}
-                <td>{{ $row->tag_rfid}}</td>
-                <td>{{ $row->dps}}</td>
-                <td>{{ $row->species_code}}</td>
-                <td>{{ $row->species_description}}</td>
                 <td>{{ $row->size_code}}</td>
                 <td>{{ $row->size_description}}</td>
-                <td>{{ $row->fish_lot}}</td>
-                <td>{{ $row->input_dps}}</td>
-                <td>{{ $row->planning_date}}</td>
                 <td>
                     <a href="/tampilkandps/{{ $row ->tag_rfid}}" class="btn btn-info">Edit</a>
+                    {{-- <a href="#" class="btn btn-danger delete" dataprep-id="{{ $row ->productionid}}">Hapus</a> --}}
                     
                     
                 </td>
@@ -93,7 +81,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                
         </tbody>
     </table>
-    {{$datarfid->links()}}
+    {{-- {{$datafishsize->links()}} --}}
 
 </div>
 </div>
